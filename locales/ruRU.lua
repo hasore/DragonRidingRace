@@ -8,7 +8,7 @@ if L then
     L["ADDON_VERSION_OUTDATED"] = "Доступна новая версия аддона.";
     L["ADDON_VERSION"] = "Версия:";
     L["ADDON_AUTHOR"] = "Автор:";
-    L["ADDON_MOTD"] = "Спасибо, что используете "..addonName.."! Напишите |cffffd700/drr|r чтобы просмотреть ваши рекорды.";
+    L["ADDON_MOTD"] = "Спасибо, что используете "..addonName.."! Напишите |cffffd700/srr|r чтобы просмотреть ваши рекорды.";
     L["DATE_FORMAT"] = "%d/%m/%y";
 
     L["FALLBACK_ENABLED"] = "Use of alternative method on event of failure is now enabled.";
@@ -22,7 +22,7 @@ if L then
 
     L["UI_PB_HEADER_GPB_A"] = "|cffffd700Лучшее время в гильдии (Высокая сложность)|r"
     L["UI_PB_HEADER_GPB_R"] = "|cffffd700Лучшее время в гильдии (противоположное)|r"
-    L["UI_PB_GUILD_INFO"] = "Лучшее время в гильдии отображается только по согильдийцам, у которых установлен аддон DragonridingRace."
+    L["UI_PB_GUILD_INFO"] = "Лучшее время в гильдии отображается только по согильдийцам, у которых установлен аддон SkyridingRace."
     L["GUILD_BEST_TIME_FORMAT"] = function(time, character) return character..": "..time.." секунд"; end
     L["GUILD_BEST_BEATEN"] = function(time, race, character) return character.." установил новый рекорд гильдии в "..race..", пройдя эту гонку за "..time.." секунд!"; end
     L["RACE_FINISHED_GUILD_PB_FORMAT"] = function(race, time) return "Ух ты, вы установили новый рекорд гильдии в "..race..", пройдя эту гонку за "..time.." секунд!"; end

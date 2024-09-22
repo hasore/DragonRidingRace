@@ -1,5 +1,5 @@
 
-local addonName, DRR = ...;
+local addonName, SRR = ...;
 local L = LibStub("AceLocale-3.0"):GetLocale(addonName, true);
 local setmetatable = _G.setmetatable;
 
@@ -22,7 +22,7 @@ function RaceTime:Create(race, time, raceType)
     rt.race = race;
     rt.time = time;
     rt.raceType = tonumber(raceType);
-    rt.addedBy = DRR.CURRENT_PLAYER;
+    rt.addedBy = SRR.CURRENT_PLAYER;
     rt.createdAt = GetServerTime();
     rt.deletedAt = nil;
 
@@ -53,7 +53,7 @@ function RaceTime:Print(data)
     data = data or self;
     local races = {'normal', 'advanced', 'reverse'};
 
-    DRR:Print(data.race .." : ".. data.time .." ( type = "..races[data.raceType].." ) by "..data.createdAt);
+    SRR:Print(data.race .." : ".. data.time .." ( type = "..races[data.raceType].." ) by "..data.createdAt);
 end
 
-DRR.RaceTime = RaceTime;
+SRR.RaceTime = RaceTime;

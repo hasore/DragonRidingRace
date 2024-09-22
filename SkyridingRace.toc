@@ -1,0 +1,25 @@
+## Interface: 110002
+
+## Title: SkyridingRace
+## Notes: Save your best skyriding course's times and compete with your friends !
+## Notes-frFR: Enregistre tes meilleurs temps de course et entre en compétition avec tes amis !
+## Author: Croc
+## Version: 0.0.1
+## SavedVariables: SRRDB
+## X-License: WTFPL
+
+embeds.xml
+
+locales/enUS.lua
+locales/frFR.lua
+locales/deDE.lua
+locales/zhCN.lua
+locales/ptPT.lua
+locales/ptBR.lua
+locales/ruRU.lua
+
+core/core.lua
+core/communication.lua
+core/race.lua
+core/racetime.lua
+core/ui.lua

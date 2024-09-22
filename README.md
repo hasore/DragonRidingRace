@@ -1,8 +1,8 @@
-# Dragonriding Race Addon
+# Skyriding Race Addon
 
-Save your best dragonriding course's times and compete with your friends!
+Save your best skyriding course's times and compete with your friends !
 
-Type /drr to display the scores window.
+Type /srr to display the scores window.
 
 Features:
 
@@ -19,11 +19,11 @@ Features to come:
 - Custom competition mode
 
 ## Commands
-- /drr ping
+- /srr ping
   - Send ping to guild members
-- /drr fallback
+- /srr fallback
   - Enable/disable fallback to OnMonsterSay when OnQuestRemoved fails.
-- /drr last
+- /srr last
   - Show last races information
 
 ## Preview
@@ -31,12 +31,11 @@ Features to come:
 
 ## Contributors
 
-Thanks a lot to the people that helped in the addon development and translation:
+Thanks to the people that helped creating this fork:
 
-- Tiramon
-- Mr7eiz
-- Arthaer
-- mostra_o_gato
-- hasore
-- qsdc & unplayed
-- finrodbr
+- Toak
+
+## Project origin
+
+This is a fork of [DragonridingRace](https://github.com/hasore/DragonridingRace) from [@hasore](https://github.com/hasore).  
+The idea is to honor his work and improve upon it.  

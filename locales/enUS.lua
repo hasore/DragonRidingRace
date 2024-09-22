@@ -4,11 +4,11 @@ local L = LibStub("AceLocale-3.0"):NewLocale(addonName, "enUS", true);
 
 if L then
     L["ADDON_NAME"] = addonName;
-    L["ADDON_DESCRIPTION"] = "Save your best dragonriding course's times and compete with your friends!";
+    L["ADDON_DESCRIPTION"] = "Save your best skyriding course's times and compete with your friends!";
     L["ADDON_VERSION_OUTDATED"] = "A more recent version of the addon is available!";
     L["ADDON_VERSION"] = "Version:";
     L["ADDON_AUTHOR"] = "Author:";
-    L["ADDON_MOTD"] = "Hey, thanks for using "..addonName.."! Type |cffffd700/drr|r to see your personal best times!";
+    L["ADDON_MOTD"] = "Hey, thanks for using "..addonName.."! Type |cffffd700/srr|r to see your personal best times!";
     L["DATE_FORMAT"] = "%m/%d/%y";
 
     L["FALLBACK_ENABLED"] = "Use of alternative method on event of failure is now enabled.";
@@ -22,7 +22,7 @@ if L then
     
     L["UI_PB_HEADER_GPB_A"] = "|cffffd700Guild best (advanced)|r"
     L["UI_PB_HEADER_GPB_R"] = "|cffffd700Guild best (reverse)|r"
-    L["UI_PB_GUILD_INFO"] = "Guild best times only for guildmates with DragonridingRace addon enabled."
+    L["UI_PB_GUILD_INFO"] = "Guild best times only for guildmates with SkyridingRace addon enabled."
     L["GUILD_BEST_TIME_FORMAT"] = function(time, character) return character..": "..time.."s"; end
     L["GUILD_BEST_BEATEN"] = function(time, race, character) return character.." has beaten the guild time on "..race.." in "..time.." seconds!"; end
     L["RACE_FINISHED_GUILD_PB_FORMAT"] = function(race, time) return "Wow, you just beat the best guild time on "..race.." by timing it in "..time.." seconds!"; end

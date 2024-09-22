@@ -8,7 +8,7 @@ if L then
     L["ADDON_VERSION_OUTDATED"] = "该插件的最新版本可用！";
     L["ADDON_VERSION"] = "版本:";
     L["ADDON_AUTHOR"] = "作者:";
-    L["ADDON_MOTD"] = "感谢使用|cFFff638a"..addonName.."！|r\n你可以输入 |cffffd700/drr|r 来查看你的驭龙竞速计时板！";
+    L["ADDON_MOTD"] = "感谢使用|cFFff638a"..addonName.."！|r\n你可以输入 |cffffd700/srr|r 来查看你的驭龙竞速计时板！";
     L["DATE_FORMAT"] = "%y/%m/%d";
 
     L["FALLBACK_ENABLED"] = "Use of alternative method on event of failure is now enabled.";

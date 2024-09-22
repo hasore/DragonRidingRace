@@ -8,13 +8,13 @@ if L then
     L["ADDON_VERSION_OUTDATED"] = "Une version plus récente de l'addon est disponible !";
     L["ADDON_VERSION"] = "Version :";
     L["ADDON_AUTHOR"] = "Auteur :";
-    L["ADDON_MOTD"] = "Hey, merci d'utiliser "..addonName.."! Entre |cffffd700/drr|r pour voir tes meilleurs temps !";
+    L["ADDON_MOTD"] = "Hey, merci d'utiliser "..addonName.."! Entre |cffffd700/srr|r pour voir tes meilleurs temps !";
     L["DATE_FORMAT"] = "%d/%m/%y";
 
     L["FALLBACK_ENABLED"] = "Use of alternative method on event of failure is now enabled.";
     L["FALLBACK_DISABLED"] = "Use of alternative method on event of failure is now disabled.";
 
-    L["UI_PB_TITLE"] = "Tes Meilleurs Temps"
+    L["UI_PB_TITLE"] = "Tes meilleurs temps"
     L["UI_PB_HEADER_RACE"] = "|cffffd700Course|r"
     L["UI_PB_HEADER_PB_N"] = "|cffffd700Temps (normal)|r"
     L["UI_PB_HEADER_PB_A"] = "|cffffd700Temps (avancé)|r"
@@ -22,7 +22,7 @@ if L then
 
     L["UI_PB_HEADER_GPB_A"] = "|cffffd700Temps guilde (avancé)|r"
     L["UI_PB_HEADER_GPB_R"] = "|cffffd700Temps guilde (inversés)|r"
-    L["UI_PB_GUILD_INFO"] = "Seuls les temps des membres de guilde ayant l'addon DragonridingRace sont affichés."
+    L["UI_PB_GUILD_INFO"] = "Seuls les temps des membres de guilde ayant l'addon SkyridingRace sont affichés."
     L["GUILD_BEST_TIME_FORMAT"] = function(time, character) return character..": "..time.."s"; end
     L["GUILD_BEST_BEATEN"] = function(time, race, character) return character.." a battu le meilleur temps de la guilde sur "..race.." en "..time.." secondes !"; end
     L["RACE_FINISHED_GUILD_PB_FORMAT"] = function(race, time) return "Wouhou, vous venez de battre le meilleur temps de la guilde sur "..race.." avec un chrono de "..time.." secondes !"; end
