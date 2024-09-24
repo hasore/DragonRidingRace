@@ -4,6 +4,111 @@ local L = LibStub("AceLocale-3.0"):GetLocale(addonName, true);
 local setmetatable = _G.setmetatable;
 
 SRR.Races = {};
+-- TWW
+-- Isle of Dorn
+-- Dornogal Drift
+table.insert(SRR.Races, {id = 80219, currency = 2923, name = L["RACE_80219"], raceType = 0, gold = 58});
+table.insert(SRR.Races, {id = 80225, currency = 2939, name = L["RACE_80225"], raceType = 1, gold = 54});
+table.insert(SRR.Races, {id = 80231, currency = 2935, name = L["RACE_80231"], raceType = 2, gold = 57});
+-- Storm's Watch Survey
+table.insert(SRR.Races, {id = 80220, currency = 2924, name = L["RACE_80220"], raceType = 0, gold = 58});
+table.insert(SRR.Races, {id = 80226, currency = 2930, name = L["RACE_80226"], raceType = 1, gold = 54});
+table.insert(SRR.Races, {id = 80232, currency = 2936, name = L["RACE_80232"], raceType = 2, gold = 57});
+-- Basin Bypass
+table.insert(SRR.Races, {id = 80221, currency = 2925, name = L["RACE_80221"], raceType = 0, gold = 58});
+table.insert(SRR.Races, {id = 80227, currency = 2931, name = L["RACE_80227"], raceType = 1, gold = 54});
+table.insert(SRR.Races, {id = 80233, currency = 2937, name = L["RACE_80233"], raceType = 2, gold = 57});
+-- The Wold Ways
+table.insert(SRR.Races, {id = 80222, currency = 2926, name = L["RACE_80222"], raceType = 0, gold = 68});
+table.insert(SRR.Races, {id = 80228, currency = 2932, name = L["RACE_80228"], raceType = 1, gold = 68});
+table.insert(SRR.Races, {id = 80234, currency = 2938, name = L["RACE_80234"], raceType = 2, gold = 70});
+-- Thunderhead Trail
+table.insert(SRR.Races, {id = 80223, currency = 2927, name = L["RACE_80223"], raceType = 0, gold = 58});
+table.insert(SRR.Races, {id = 80229, currency = 2933, name = L["RACE_80229"], raceType = 1, gold = 54});
+table.insert(SRR.Races, {id = 80235, currency = 2939, name = L["RACE_80235"], raceType = 2, gold = 57});
+-- Orecreg's Doglegs
+table.insert(SRR.Races, {id = 80224, currency = 2928, name = L["RACE_80224"], raceType = 0, gold = 58});
+table.insert(SRR.Races, {id = 80230, currency = 2934, name = L["RACE_80230"], raceType = 1, gold = 54});
+table.insert(SRR.Races, {id = 80236, currency = 2940, name = L["RACE_80236"], raceType = 2, gold = 57});
+
+-- The Ringing Deeps
+-- Earthenworks Weave
+table.insert(SRR.Races, {id = 80237, currency = 2941, name = L["RACE_80237"], raceType = 0, gold = 52});
+table.insert(SRR.Races, {id = 80244, currency = 2947, name = L["RACE_80244"], raceType = 1, gold = 00});
+table.insert(SRR.Races, {id = 80250, currency = 2953, name = L["RACE_80250"], raceType = 2, gold = 00});
+-- Ringing Deeps Ramble
+table.insert(SRR.Races, {id = 80238, currency = 2942, name = L["RACE_80238"], raceType = 0, gold = 57});
+table.insert(SRR.Races, {id = 80245, currency = 2948, name = L["RACE_80245"], raceType = 1, gold = 00});
+table.insert(SRR.Races, {id = 80251, currency = 2954, name = L["RACE_80251"], raceType = 2, gold = 00});
+-- Chittering Concourse
+table.insert(SRR.Races, {id = 80239, currency = 2943, name = L["RACE_80239"], raceType = 0, gold = 56});
+table.insert(SRR.Races, {id = 80246, currency = 2949, name = L["RACE_80246"], raceType = 1, gold = 00});
+table.insert(SRR.Races, {id = 80252, currency = 2955, name = L["RACE_80252"], raceType = 2, gold = 00});
+-- Cataract River Cruise
+table.insert(SRR.Races, {id = 80240, currency = 2944, name = L["RACE_80240"], raceType = 0, gold = 60});
+table.insert(SRR.Races, {id = 80247, currency = 2950, name = L["RACE_80247"], raceType = 1, gold = 00});
+table.insert(SRR.Races, {id = 80253, currency = 2956, name = L["RACE_80253"], raceType = 2, gold = 00});
+-- Taelloch Twist
+table.insert(SRR.Races, {id = 80242, currency = 2945, name = L["RACE_80242"], raceType = 0, gold = 47});
+table.insert(SRR.Races, {id = 80248, currency = 2951, name = L["RACE_80248"], raceType = 1, gold = 00});
+table.insert(SRR.Races, {id = 80254, currency = 2957, name = L["RACE_80254"], raceType = 2, gold = 00});
+-- Opportunity Point Amble
+table.insert(SRR.Races, {id = 80243, currency = 2946, name = L["RACE_80243"], raceType = 0, gold = 77});
+table.insert(SRR.Races, {id = 80249, currency = 2952, name = L["RACE_80249"], raceType = 1, gold = 00});
+table.insert(SRR.Races, {id = 80255, currency = 2958, name = L["RACE_80255"], raceType = 2, gold = 00});
+
+-- Hallowfall
+-- Dunelle's Detour
+table.insert(SRR.Races, {id = 80256, currency = 2959, name = L["RACE_80256"], raceType = 0, gold = 65});
+table.insert(SRR.Races, {id = 80265, currency = 2965, name = L["RACE_80265"], raceType = 1, gold = 00});
+table.insert(SRR.Races, {id = 80271, currency = 2971, name = L["RACE_80271"], raceType = 2, gold = 00});
+-- Tenir's Traversal
+table.insert(SRR.Races, {id = 80257, currency = 2960, name = L["RACE_80257"], raceType = 0, gold = 00});
+table.insert(SRR.Races, {id = 80266, currency = 2966, name = L["RACE_80266"], raceType = 1, gold = 00});
+table.insert(SRR.Races, {id = 80272, currency = 2972, name = L["RACE_80272"], raceType = 2, gold = 00});
+-- Light's Redoubt Descent
+table.insert(SRR.Races, {id = 80258, currency = 2961, name = L["RACE_80258"], raceType = 0, gold = 63});
+table.insert(SRR.Races, {id = 80267, currency = 2967, name = L["RACE_80267"], raceType = 1, gold = 00});
+table.insert(SRR.Races, {id = 80273, currency = 2973, name = L["RACE_80273"], raceType = 2, gold = 00});
+-- Stillstone Slalom
+table.insert(SRR.Races, {id = 80259, currency = 2962, name = L["RACE_80259"], raceType = 0, gold = 56});
+table.insert(SRR.Races, {id = 80268, currency = 2968, name = L["RACE_80268"], raceType = 1, gold = 00});
+table.insert(SRR.Races, {id = 80274, currency = 2974, name = L["RACE_80274"], raceType = 2, gold = 00});
+-- Mereldar Meander
+table.insert(SRR.Races, {id = 80260, currency = 2963, name = L["RACE_80260"], raceType = 0, gold = 76});
+table.insert(SRR.Races, {id = 80269, currency = 2969, name = L["RACE_80269"], raceType = 1, gold = 00});
+table.insert(SRR.Races, {id = 80275, currency = 2975, name = L["RACE_80275"], raceType = 2, gold = 00});
+-- Velhan's Venture
+table.insert(SRR.Races, {id = 80261, currency = 2964, name = L["RACE_80261"], raceType = 0, gold = 55});
+table.insert(SRR.Races, {id = 80270, currency = 2970, name = L["RACE_80270"], raceType = 1, gold = 00});
+table.insert(SRR.Races, {id = 80276, currency = 2976, name = L["RACE_80276"], raceType = 2, gold = 00});
+
+-- Azj-Kahet
+-- City of Threads Twist
+table.insert(SRR.Races, {id = 80277, currency = 2977, name = L["RACE_80277"], raceType = 0, gold = 78});
+table.insert(SRR.Races, {id = 80283, currency = 2983, name = L["RACE_80283"], raceType = 1, gold = 00});
+table.insert(SRR.Races, {id = 80289, currency = 2989, name = L["RACE_80289"], raceType = 2, gold = 00});
+-- Maddening Deep Dip
+table.insert(SRR.Races, {id = 80278, currency = 2978, name = L["RACE_80278"], raceType = 0, gold = 58});
+table.insert(SRR.Races, {id = 80284, currency = 2984, name = L["RACE_80284"], raceType = 1, gold = 00});
+table.insert(SRR.Races, {id = 80290, currency = 2990, name = L["RACE_80290"], raceType = 2, gold = 00});
+-- The Weaver's Wing
+table.insert(SRR.Races, {id = 80279, currency = 2979, name = L["RACE_80279"], raceType = 0, gold = 54});
+table.insert(SRR.Races, {id = 80285, currency = 2985, name = L["RACE_80285"], raceType = 1, gold = 00});
+table.insert(SRR.Races, {id = 80291, currency = 2991, name = L["RACE_80291"], raceType = 2, gold = 00});
+-- Rak-Ahat Rush
+table.insert(SRR.Races, {id = 80280, currency = 2980, name = L["RACE_80280"], raceType = 0, gold = 70});
+table.insert(SRR.Races, {id = 80286, currency = 2986, name = L["RACE_80286"], raceType = 1, gold = 00});
+table.insert(SRR.Races, {id = 80292, currency = 2992, name = L["RACE_80292"], raceType = 2, gold = 00});
+-- Pit Plunge
+table.insert(SRR.Races, {id = 80281, currency = 2981, name = L["RACE_80281"], raceType = 0, gold = 63});
+table.insert(SRR.Races, {id = 80287, currency = 2987, name = L["RACE_80287"], raceType = 1, gold = 00});
+table.insert(SRR.Races, {id = 80293, currency = 2993, name = L["RACE_80293"], raceType = 2, gold = 00});
+-- Siegehold Scuttle
+table.insert(SRR.Races, {id = 80282, currency = 2982, name = L["RACE_80282"], raceType = 0, gold = 70});
+table.insert(SRR.Races, {id = 80288, currency = 2988, name = L["RACE_80288"], raceType = 1, gold = 00});
+table.insert(SRR.Races, {id = 80294, currency = 2994, name = L["RACE_80294"], raceType = 2, gold = 00});
+
 -- The Waking Shores
 -- Ruby Lifeshrine Loop
 table.insert(SRR.Races, {id = 66679, currency = 2042, name = L["RACE_66679"], raceType = 0, gold = 64});

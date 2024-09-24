@@ -8,6 +8,10 @@ local isOpened = false;
 
 function SRR:AddAllPB(container)
     container:ReleaseChildren();
+    SRR:AddDornIslandPB(container)
+    SRR:AddRingingDeepsPB(container)
+    SRR:AddHallowfallPB(container)
+    SRR:AddAzjKahetPB(container)
     SRR:AddWakingShoresPB(container);
     SRR:AddOhnahranPlainsPB(container);
     SRR:AddAzureSpanPB(container);
@@ -31,6 +35,62 @@ function SRR:AddPBLine_Table(races, container)
             SRR:AddPBLine(race, raceAdv, raceReverse, normal, advanced, reverse, container);
         end);
     end
+end
+
+function SRR:AddDornIslandPB(container)
+    SRR:AddPBZoneHeader(L["ZONE_DORN_ISLAND"], container)
+    SRR:AddPBHeader(container);
+    local races = {
+        {normal = 80219, advanced = 80225, reverse = 80231},
+        {normal = 80220, advanced = 80226, reverse = 80232},
+        {normal = 80221, advanced = 80227, reverse = 80233},
+        {normal = 80222, advanced = 80228, reverse = 80234},
+        {normal = 80223, advanced = 80229, reverse = 80235},
+        {normal = 80224, advanced = 80230, reverse = 80236},
+    };
+    SRR:AddPBLine_Table(races, container);
+end
+
+function SRR:AddRingingDeepsPB(container)
+    SRR:AddPBZoneHeader(L["ZONE_RINGING_DEEPS"], container)
+    SRR:AddPBHeader(container);
+    local races = {
+        {normal = 80237, advanced = 80244, reverse = 80250},
+        {normal = 80238, advanced = 80245, reverse = 80251},
+        {normal = 80239, advanced = 80246, reverse = 80252},
+        {normal = 80240, advanced = 80247, reverse = 80253},
+        {normal = 80242, advanced = 80248, reverse = 80254},
+        {normal = 80243, advanced = 80249, reverse = 80255},
+    };
+    SRR:AddPBLine_Table(races, container);
+end
+
+function SRR:AddHallowfallPB(container)
+    SRR:AddPBZoneHeader(L["ZONE_HALLOWFALL"], container)
+    SRR:AddPBHeader(container);
+    local races = {
+        {normal = 80256, advanced = 80265, reverse = 80271},
+        {normal = 80257, advanced = 80266, reverse = 80272},
+        {normal = 80258, advanced = 80267, reverse = 80273},
+        {normal = 80259, advanced = 80268, reverse = 80274},
+        {normal = 80260, advanced = 80269, reverse = 80275},
+        {normal = 80261, advanced = 80270, reverse = 80276},
+    };
+    SRR:AddPBLine_Table(races, container);
+end
+
+function SRR:AddAzjKahetPB(container)
+    SRR:AddPBZoneHeader(L["ZONE_AZJ_KAHET"], container)
+    SRR:AddPBHeader(container);
+    local races = {
+        {normal = 80277, advanced = 80283, reverse = 80289},
+        {normal = 80278, advanced = 80284, reverse = 80290},
+        {normal = 80279, advanced = 80285, reverse = 80291},
+        {normal = 80280, advanced = 80286, reverse = 80292},
+        {normal = 80281, advanced = 80287, reverse = 80293},
+        {normal = 80282, advanced = 80288, reverse = 80294},
+    };
+    SRR:AddPBLine_Table(races, container);
 end
 
 function SRR:AddWakingShoresPB(container)
