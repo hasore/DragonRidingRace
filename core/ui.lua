@@ -253,7 +253,7 @@ function SRR:AddPBHeader(container)
 
     local raceGTimeR = AceGUI:Create("Label");
     raceGTimeR:SetText(L["UI_PB_HEADER_GPB_R"]);
-    raceGTimeR:SetRelativeWidth(0.1);
+    raceGTimeR:SetRelativeWidth(0.15);
     lineGroup:AddChild(raceGTimeR);
 end
 
