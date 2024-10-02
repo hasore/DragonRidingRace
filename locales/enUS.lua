@@ -19,7 +19,8 @@ if L then
     L["UI_PB_HEADER_PB_N"] = "|cffffd700Time (normal)|r"
     L["UI_PB_HEADER_PB_A"] = "|cffffd700Time (advanced)|r"
     L["UI_PB_HEADER_PB_R"] = "|cffffd700Time (reverse)|r"
-    
+
+    L["UI_PB_HEADER_GPB_N"] = "|cffffd700Guild best (normal)|r"    
     L["UI_PB_HEADER_GPB_A"] = "|cffffd700Guild best (advanced)|r"
     L["UI_PB_HEADER_GPB_R"] = "|cffffd700Guild best (reverse)|r"
     L["UI_PB_GUILD_INFO"] = "Guild best times only for guildmates with SkyridingRace addon enabled."

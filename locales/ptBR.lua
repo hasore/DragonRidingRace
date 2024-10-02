@@ -45,8 +45,7 @@ if L then
     L["ZONE_OHNAHRAN_PLAINS"] = "Chapada Ohn'ahrana"
     L["ZONE_AZURE_SPAN"] = "Vasta Lazúli"
     L["ZONE_THALDRASZUS"] = "Thaldraszus"
-    L["ZONE_DORN_ISLAND"] = "Dorn Island"
-
+ 
     -- Dorn Island
     L["RACE_80219"] = "Dornogal Drift"
     L["RACE_80225"] = "Dornogal Drift (advanced)"

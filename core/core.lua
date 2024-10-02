@@ -8,8 +8,8 @@ local L = LibStub("AceLocale-3.0"):GetLocale(addonName, true);
 local SRR = LibStub("AceAddon-3.0"):NewAddon(addon, addonName, "AceEvent-3.0", "AceConsole-3.0", "AceComm-3.0", "AceTimer-3.0");
 
 -- CONFIGURATION
---SRR.version = "0.0.1";
-SRR.version = "dev";
+SRR.version = "0.0.1";
+--SRR.version = "dev";
 SRR.versionAlertSent = false
 
 SRR.COMM_PREFIX = addonName;

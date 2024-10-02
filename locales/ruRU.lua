@@ -35,8 +35,7 @@ if L then
     L["ZONE_OHNAHRAN_PLAINS"] = "Равнины Он'ары"
     L["ZONE_AZURE_SPAN"] = "Лазурный Проѝтор"
     L["ZONE_THALDRASZUS"] = "Тальдразуѝ"
-    L["ZONE_DORN_ISLAND"] = "Dorn Island"
-
+ 
     -- Dorn Island
     L["RACE_80219"] = "Dornogal Drift"
     L["RACE_80225"] = "Dornogal Drift (advanced)"
@@ -56,7 +55,7 @@ if L then
     L["RACE_80224"] = "Orecreg's Doglegs"
     L["RACE_80230"] = "Orecreg's Doglegs (avanced)"
     L["RACE_80236"] = "Orecreg's Doglegs (reverse)"
-    -- The Ringing Deeps
+        -- The Ringing Deeps
     L["RACE_80237"] = "Earthenworks Weave"
     L["RACE_80244"] = "Earthenworks Weave (advanced)"
     L["RACE_80250"] = "Earthenworks Weave (reverse)"
@@ -113,6 +112,7 @@ if L then
     L["RACE_80282"] = "Siegehold Scuttle"
     L["RACE_80288"] = "Siegehold Scuttle (avanced)"
     L["RACE_80294"] = "Siegehold Scuttle (reverse)"
+    
     
     L["RACE_66679"] = "Круг у Рубинового ѝвѝтилища Жизни"
     L["RACE_66692"] = "Круг у Рубинового ѝвѝтилища Жизни (Выѝокаѝ ѝложноѝть)"

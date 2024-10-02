@@ -1,4 +1,3 @@
-
 local addonName, SRR = ...;
 local L = LibStub("AceLocale-3.0"):GetLocale(addonName, true);
 local setmetatable = _G.setmetatable;
@@ -229,27 +228,32 @@ function SRR:AddPBHeader(container)
 
     local raceTimeN = AceGUI:Create("Label");
     raceTimeN:SetText(L["UI_PB_HEADER_PB_N"]);
-    raceTimeN:SetRelativeWidth(0.15);
+    raceTimeN:SetRelativeWidth(0.1);
     lineGroup:AddChild(raceTimeN);
 
     local raceTimeA = AceGUI:Create("Label");
     raceTimeA:SetText(L["UI_PB_HEADER_PB_A"]);
-    raceTimeA:SetRelativeWidth(0.15);
+    raceTimeA:SetRelativeWidth(0.11);
     lineGroup:AddChild(raceTimeA);
 
     local raceTimeR = AceGUI:Create("Label");
     raceTimeR:SetText(L["UI_PB_HEADER_PB_R"]);
-    raceTimeR:SetRelativeWidth(0.15);
+    raceTimeR:SetRelativeWidth(0.12);
     lineGroup:AddChild(raceTimeR);
+    
+    local raceGTimeN = AceGUI:Create("Label");
+    raceGTimeN:SetText(L["UI_PB_HEADER_GPB_N"]);
+    raceGTimeN:SetRelativeWidth(0.15);
+    lineGroup:AddChild(raceGTimeN);
 
     local raceGTimeA = AceGUI:Create("Label");
     raceGTimeA:SetText(L["UI_PB_HEADER_GPB_A"]);
-    raceGTimeA:SetRelativeWidth(0.17);
+   raceGTimeA:SetRelativeWidth(0.15);
     lineGroup:AddChild(raceGTimeA);
 
     local raceGTimeR = AceGUI:Create("Label");
     raceGTimeR:SetText(L["UI_PB_HEADER_GPB_R"]);
-    raceGTimeR:SetRelativeWidth(0.17);
+    raceGTimeR:SetRelativeWidth(0.1);
     lineGroup:AddChild(raceGTimeR);
 end
 
@@ -264,6 +268,7 @@ function SRR:AddPBLine(race, raceAdv, raceReverse, normalTime, advancedTime, rev
             formatedNormal = "|cff13ef13"..formatedNormal.."|r";
         end
     end
+
 
     formatedNormal = formatedNormal.." / |cffffd700"..L["RACE_TIME_FORMAT"](race.gold).."|r";
 
@@ -305,18 +310,30 @@ function SRR:AddPBLine(race, raceAdv, raceReverse, normalTime, advancedTime, rev
 
     local raceTimeN = AceGUI:Create("Label");
     raceTimeN:SetText(formatedNormal);
-    raceTimeN:SetRelativeWidth(0.15);
+    raceTimeN:SetRelativeWidth(0.11);
     lineGroup:AddChild(raceTimeN);
 
     local raceTimeA = AceGUI:Create("Label");
     raceTimeA:SetText(formatedAdvanced);
-    raceTimeA:SetRelativeWidth(0.15);
+    raceTimeA:SetRelativeWidth(0.11);
     lineGroup:AddChild(raceTimeA);
 
     local raceTimeR = AceGUI:Create("Label");
     raceTimeR:SetText(formatedReverse);
-    raceTimeR:SetRelativeWidth(0.15);
+    raceTimeR:SetRelativeWidth(0.11);
     lineGroup:AddChild(raceTimeR);
+
+    local gtimeN = nil;
+    if nil ~= race then
+        local gBest = SRR.db.global.guildpb[race.id];
+        if nil ~= gBest then
+            local player = UnitName("player")
+            gtimeN = L["GUILD_BEST_TIME_FORMAT"](gBest.time, gBest.addedBy);
+            if SRR.CURRENT_PLAYER == gBest.addedBy then
+                gtimeN = "|cff13ef13"..gtimeN.."|r";
+            end
+        end
+    end
 
     local gtimeA = nil;
     if nil ~= raceAdv then
@@ -342,17 +359,23 @@ function SRR:AddPBLine(race, raceAdv, raceReverse, normalTime, advancedTime, rev
         end
     end
 
+    gtimeN = gtimeN or '-';
     gtimeA = gtimeA or '-';
     gtimeR = gtimeR or '-';
 
+    local raceGTimeN = AceGUI:Create("Label");
+    raceGTimeN:SetText(gtimeN);
+    raceGTimeN:SetRelativeWidth(0.15);
+    lineGroup:AddChild(raceGTimeN);
+
     local raceGTimeA = AceGUI:Create("Label");
     raceGTimeA:SetText(gtimeA);
-    raceGTimeA:SetRelativeWidth(0.17);
+    raceGTimeA:SetRelativeWidth(0.15);
     lineGroup:AddChild(raceGTimeA);
 
     local raceGTimeR = AceGUI:Create("Label");
     raceGTimeR:SetText(gtimeR);
-    raceGTimeR:SetRelativeWidth(0.17);
+    raceGTimeR:SetRelativeWidth(0.15);
     lineGroup:AddChild(raceGTimeR);
 end
 
