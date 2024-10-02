@@ -8,7 +8,7 @@ if L then
     L["ADDON_VERSION_OUTDATED"] = "Eine neuere Version des Addons ist verfügbar!";
     L["ADDON_VERSION"] = "Version:";
     L["ADDON_AUTHOR"] = "Urheber:";
-    L["ADDON_MOTD"] = "Hey, danke das du "..addonName.." benutzt! Tippe |cffffd700/drr|r um deine persönlichen Bestzeiten zu sehen!";
+    L["ADDON_MOTD"] = "Hey, danke das du "..addonName.." benutzt! Tippe |cffffd700/srr|r um deine persönlichen Bestzeiten zu sehen!";
     L["DATE_FORMAT"] = "%d.%m.%y";
 
     L["FALLBACK_ENABLED"] = "Use of alternative method on event of failure is now enabled.";
@@ -29,7 +29,7 @@ if L then
 
     L["UI_PB_HEADER_GPB_A"] = "|cffffd700Beste Gildenzeit (fortgeschritten)|r"
     L["UI_PB_HEADER_GPB_R"] = "|cffffd700Beste Gildenzeit (umgekehrt)|r"
-    L["UI_PB_GUILD_INFO"] = "Bestzeiten der Gilde nur für Gildenmitglieder mit aktiviertem DragonridingRace Addon."
+    L["UI_PB_GUILD_INFO"] = "Bestzeiten der Gilde nur für Gildenmitglieder mit aktiviertem SkyridingRace Addon."
     L["GUILD_BEST_TIME_FORMAT"] = function(time, character) return character..": "..time.."s"; end
     L["GUILD_BEST_BEATEN"] = function(time, race, character) return character.." hat die Gildenzeit auf "..race.." in "..time.." Sekunden geschlagen!"; end
     L["RACE_FINISHED_GUILD_PB_FORMAT"] = function(race, time) return "Wow, du hast gerade die beste Gildenzeit auf "..race.." geschlagen, indem du sie in "..time.." Sekunden gemessen hast!"; end
@@ -37,11 +37,35 @@ if L then
     -- Chat lookup
     L["NPC_NAMES"] = {"Bronzezeithüterin", "Bronzezeithüter", "Bronzezeithüterassistant"};
 
+    L["ZONE_DORN_ISLAND"] = "Dorn Island"
+    L["ZONE_RINGING_DEEPS"] = "The Ringing Deeps"
+    L["ZONE_HALLOWFALL"] = "Hallowfall"
+    L["ZONE_AZJ_KAHET"] = "Azj-Kahet"
     L["ZONE_WAKING_SHORES"] = "Küste des Erwachesn"
     L["ZONE_OHNAHRAN_PLAINS"] = "Ebenen von Ohn'Ahra"
     L["ZONE_AZURE_SPAN"] = "Azurblaues Gebirge"
     L["ZONE_THALDRASZUS"] = "Thaldraszus"
+    -- Dorn Island
+    L["RACE_80219"] = "Dornogal Drift"
+    L["RACE_80225"] = "Dornogal Drift (advanced)"
+    L["RACE_80231"] = "Dornogal Drift (reverse)"
+    L["RACE_80220"] = "Storm's Watch Survey"
+    L["RACE_80226"] = "Storm's Watch Survey (advanced)"
+    L["RACE_80232"] = "Storm's Watch Survey (reverse)"
+    L["RACE_80221"] = "Basin Bypass"
+    L["RACE_80227"] = "Basin Bypass (avanced)"
+    L["RACE_80233"] = "Basin Bypass (reverse)"
+    L["RACE_80222"] = "The Wold Ways"
+    L["RACE_80228"] = "The Wold Ways (avanced)"
+    L["RACE_80234"] = "The Wold Ways (reverse)"
+    L["RACE_80223"] = "Thunderhead Trail"
+    L["RACE_80229"] = "Thunderhead Trail (avanced)"
+    L["RACE_80235"] = "Thunderhead Trail (reverse)"
+    L["RACE_80224"] = "Orecreg's Doglegs"
+    L["RACE_80230"] = "Orecreg's Doglegs (avanced)"
+    L["RACE_80236"] = "Orecreg's Doglegs (reverse)"
 
+    
     L["RACE_66679"] = "Rubinlebensschrein-Schleife"
     L["RACE_66692"] = "Rubinlebensschrein-Schleife (fortgeschritten)"
     L["RACE_72052"] = "Rubinlebensschrein-Schleife (umgekehrt)"

@@ -1,41 +1,100 @@
-
-local addonName, DRR = ...;
+local addonName, SRR = ...;
 local L = LibStub("AceLocale-3.0"):GetLocale(addonName, true);
 local setmetatable = _G.setmetatable;
 
 local AceGUI = LibStub("AceGUI-3.0");
 local isOpened = false;
 
-function DRR:AddAllPB(container)
+function SRR:AddAllPB(container)
     container:ReleaseChildren();
-    DRR:AddWakingShoresPB(container);
-    DRR:AddOhnahranPlainsPB(container);
-    DRR:AddAzureSpanPB(container);
-    DRR:AddThaldraszusPB(container);
-    DRR:AddForbiddenReachPB(container);
-    DRR:AddZaralekCavernPB(container);
-    DRR:AddKalimdorCupPB(container);
+    SRR:AddDornIslandPB(container)
+    SRR:AddRingingDeepsPB(container)
+    SRR:AddHallowfallPB(container)
+    SRR:AddAzjKahetPB(container)
+    SRR:AddWakingShoresPB(container);
+    SRR:AddOhnahranPlainsPB(container);
+    SRR:AddAzureSpanPB(container);
+    SRR:AddThaldraszusPB(container);
+    SRR:AddForbiddenReachPB(container);
+    SRR:AddZaralekCavernPB(container);
+    SRR:AddKalimdorCupPB(container);
     --container:DoLayout();
 end
 
-function DRR:AddPBLine_Table(races, container)
+function SRR:AddPBLine_Table(races, container)
     if races then
         table.foreach(races, function(k, data)
-            local race = DRR:GetRace(data.normal);
-            local raceAdv = DRR:GetRace(data.advanced);
-            local raceReverse = DRR:GetRace(data.reverse);
+            local race = SRR:GetRace(data.normal);
+            local raceAdv = SRR:GetRace(data.advanced);
+            local raceReverse = SRR:GetRace(data.reverse);
 
-            local normal = DRR.db.global.pb[data.normal];
-            local advanced = DRR.db.global.pb[data.advanced or 0];
-            local reverse = DRR.db.global.pb[data.reverse or 0];
-            DRR:AddPBLine(race, raceAdv, raceReverse, normal, advanced, reverse, container);
+            local normal = SRR.db.global.pb[data.normal];
+            local advanced = SRR.db.global.pb[data.advanced or 0];
+            local reverse = SRR.db.global.pb[data.reverse or 0];
+            SRR:AddPBLine(race, raceAdv, raceReverse, normal, advanced, reverse, container);
         end);
     end
 end
 
-function DRR:AddWakingShoresPB(container)
-    DRR:AddPBZoneHeader(L["ZONE_WAKING_SHORES"], container)
-    DRR:AddPBHeader(container);
+function SRR:AddDornIslandPB(container)
+    SRR:AddPBZoneHeader(L["ZONE_DORN_ISLAND"], container)
+    SRR:AddPBHeader(container);
+    local races = {
+        {normal = 80219, advanced = 80225, reverse = 80231},
+        {normal = 80220, advanced = 80226, reverse = 80232},
+        {normal = 80221, advanced = 80227, reverse = 80233},
+        {normal = 80222, advanced = 80228, reverse = 80234},
+        {normal = 80223, advanced = 80229, reverse = 80235},
+        {normal = 80224, advanced = 80230, reverse = 80236},
+    };
+    SRR:AddPBLine_Table(races, container);
+end
+
+function SRR:AddRingingDeepsPB(container)
+    SRR:AddPBZoneHeader(L["ZONE_RINGING_DEEPS"], container)
+    SRR:AddPBHeader(container);
+    local races = {
+        {normal = 80237, advanced = 80244, reverse = 80250},
+        {normal = 80238, advanced = 80245, reverse = 80251},
+        {normal = 80239, advanced = 80246, reverse = 80252},
+        {normal = 80240, advanced = 80247, reverse = 80253},
+        {normal = 80242, advanced = 80248, reverse = 80254},
+        {normal = 80243, advanced = 80249, reverse = 80255},
+    };
+    SRR:AddPBLine_Table(races, container);
+end
+
+function SRR:AddHallowfallPB(container)
+    SRR:AddPBZoneHeader(L["ZONE_HALLOWFALL"], container)
+    SRR:AddPBHeader(container);
+    local races = {
+        {normal = 80256, advanced = 80265, reverse = 80271},
+        {normal = 80257, advanced = 80266, reverse = 80272},
+        {normal = 80258, advanced = 80267, reverse = 80273},
+        {normal = 80259, advanced = 80268, reverse = 80274},
+        {normal = 80260, advanced = 80269, reverse = 80275},
+        {normal = 80261, advanced = 80270, reverse = 80276},
+    };
+    SRR:AddPBLine_Table(races, container);
+end
+
+function SRR:AddAzjKahetPB(container)
+    SRR:AddPBZoneHeader(L["ZONE_AZJ_KAHET"], container)
+    SRR:AddPBHeader(container);
+    local races = {
+        {normal = 80277, advanced = 80283, reverse = 80289},
+        {normal = 80278, advanced = 80284, reverse = 80290},
+        {normal = 80279, advanced = 80285, reverse = 80291},
+        {normal = 80280, advanced = 80286, reverse = 80292},
+        {normal = 80281, advanced = 80287, reverse = 80293},
+        {normal = 80282, advanced = 80288, reverse = 80294},
+    };
+    SRR:AddPBLine_Table(races, container);
+end
+
+function SRR:AddWakingShoresPB(container)
+    SRR:AddPBZoneHeader(L["ZONE_WAKING_SHORES"], container)
+    SRR:AddPBHeader(container);
     local races = {
         {normal = 66679, advanced = 66692, reverse = 72052},
         {normal = 66710, advanced = 66712, reverse = 72700},
@@ -46,12 +105,12 @@ function DRR:AddWakingShoresPB(container)
         {normal = 66777, advanced = 66778, reverse = 72739},
         {normal = 66786, advanced = 66787, reverse = 72740},
     };
-    DRR:AddPBLine_Table(races, container);
+    SRR:AddPBLine_Table(races, container);
 end
 
-function DRR:AddOhnahranPlainsPB(container)
-    DRR:AddPBZoneHeader(L["ZONE_OHNAHRAN_PLAINS"], container)
-    DRR:AddPBHeader(container);
+function SRR:AddOhnahranPlainsPB(container)
+    SRR:AddPBZoneHeader(L["ZONE_OHNAHRAN_PLAINS"], container)
+    SRR:AddPBHeader(container);
     local races = {
         {normal = 66835, advanced = 66836, reverse = 72801},
         {normal = 66877, advanced = 66878, reverse = 72802},
@@ -61,12 +120,12 @@ function DRR:AddOhnahranPlainsPB(container)
         {normal = 66933, advanced = nil, reverse = nil},
         {normal = 70710, advanced = 70711, reverse = 72807},
     };
-    DRR:AddPBLine_Table(races, container);
+    SRR:AddPBLine_Table(races, container);
 end
 
-function DRR:AddAzureSpanPB(container)
-    DRR:AddPBZoneHeader(L["ZONE_AZURE_SPAN"], container)
-    DRR:AddPBHeader(container);
+function SRR:AddAzureSpanPB(container)
+    SRR:AddPBZoneHeader(L["ZONE_AZURE_SPAN"], container)
+    SRR:AddPBHeader(container);
     local races = {
         {normal = 66946, advanced = 66947, reverse = 72796},
         {normal = 67002, advanced = 67003, reverse = 72799},
@@ -75,12 +134,12 @@ function DRR:AddAzureSpanPB(container)
         {normal = 67565, advanced = 67566, reverse = 72795},
         {normal = 67741, advanced = 67742, reverse = 72797},
     };
-    DRR:AddPBLine_Table(races, container);
+    SRR:AddPBLine_Table(races, container);
 end
 
-function DRR:AddThaldraszusPB(container)
-    DRR:AddPBZoneHeader(L["ZONE_THALDRASZUS"], container)
-    DRR:AddPBHeader(container);
+function SRR:AddThaldraszusPB(container)
+    SRR:AddPBZoneHeader(L["ZONE_THALDRASZUS"], container)
+    SRR:AddPBHeader(container);
     local races = {
         {normal = 67095, advanced = 67096, reverse = 72793},
         {normal = 69957, advanced = 69958, reverse = 72792},
@@ -89,12 +148,12 @@ function DRR:AddThaldraszusPB(container)
         {normal = 70157, advanced = 70158, reverse = 72769},
         {normal = 70161, advanced = 70163, reverse = 72750},
     };
-    DRR:AddPBLine_Table(races, container);
+    SRR:AddPBLine_Table(races, container);
 end
 
-function DRR:AddForbiddenReachPB(container)
-    DRR:AddPBZoneHeader(L["ZONE_FORBIDDENREACH"], container)
-    DRR:AddPBHeader(container);
+function SRR:AddForbiddenReachPB(container)
+    SRR:AddPBZoneHeader(L["ZONE_FORBIDDENREACH"], container)
+    SRR:AddPBHeader(container);
     local races = {
         {normal = 73017, advanced = 73018, reverse = 73019},
         {normal = 73020, advanced = 73023, reverse = 73024},
@@ -103,12 +162,12 @@ function DRR:AddForbiddenReachPB(container)
         {normal = 73033, advanced = 73034, reverse = 73052},
         {normal = 73061, advanced = 73062, reverse = 73065},
     };
-    DRR:AddPBLine_Table(races, container);
+    SRR:AddPBLine_Table(races, container);
 end
 
-function DRR:AddZaralekCavernPB(container)
-    DRR:AddPBZoneHeader(L["ZONE_ZARALEKCAVERN"], container)
-    DRR:AddPBHeader(container);
+function SRR:AddZaralekCavernPB(container)
+    SRR:AddPBZoneHeader(L["ZONE_ZARALEKCAVERN"], container)
+    SRR:AddPBHeader(container);
     local races = {
         {normal = 74839, advanced = 74842, reverse = 74882},
         {normal = 74889, advanced = 74899, reverse = 74925},
@@ -117,12 +176,12 @@ function DRR:AddZaralekCavernPB(container)
         {normal = 74972, advanced = 74975, reverse = 74977},
         {normal = 75035, advanced = 75042, reverse = 75043},
     };
-    DRR:AddPBLine_Table(races, container);
+    SRR:AddPBLine_Table(races, container);
 end
 
-function DRR:AddKalimdorCupPB(container)
-    DRR:AddPBZoneHeader(L["ZONE_KALIMDORCUP"], container)
-    DRR:AddPBHeader(container);
+function SRR:AddKalimdorCupPB(container)
+    SRR:AddPBZoneHeader(L["ZONE_KALIMDORCUP"], container)
+    SRR:AddPBHeader(container);
     local races = {
         {normal = 75330, advanced = 75331, reverse = 75332},
         {normal = 75310, advanced = 75311, reverse = 75312},
@@ -141,10 +200,10 @@ function DRR:AddKalimdorCupPB(container)
         {normal = 75481, advanced = 75482, reverse = 75483},
         {normal = 75485, advanced = 75486, reverse = 75487},
     };
-    DRR:AddPBLine_Table(races, container);
+    SRR:AddPBLine_Table(races, container);
 end
 
-function DRR:AddPBZoneHeader(zoneName, container)
+function SRR:AddPBZoneHeader(zoneName, container)
     local lineGroup = AceGUI:Create("SimpleGroup");
     lineGroup:SetFullWidth(true);
     lineGroup:SetLayout("Flow");
@@ -156,7 +215,7 @@ function DRR:AddPBZoneHeader(zoneName, container)
     lineGroup:AddChild(zone);
 end
 
-function DRR:AddPBHeader(container)
+function SRR:AddPBHeader(container)
     local lineGroup = AceGUI:Create("SimpleGroup");
     lineGroup:SetFullWidth(true);
     lineGroup:SetLayout("Flow");
@@ -169,31 +228,36 @@ function DRR:AddPBHeader(container)
 
     local raceTimeN = AceGUI:Create("Label");
     raceTimeN:SetText(L["UI_PB_HEADER_PB_N"]);
-    raceTimeN:SetRelativeWidth(0.15);
+    raceTimeN:SetRelativeWidth(0.1);
     lineGroup:AddChild(raceTimeN);
 
     local raceTimeA = AceGUI:Create("Label");
     raceTimeA:SetText(L["UI_PB_HEADER_PB_A"]);
-    raceTimeA:SetRelativeWidth(0.15);
+    raceTimeA:SetRelativeWidth(0.11);
     lineGroup:AddChild(raceTimeA);
 
     local raceTimeR = AceGUI:Create("Label");
     raceTimeR:SetText(L["UI_PB_HEADER_PB_R"]);
-    raceTimeR:SetRelativeWidth(0.15);
+    raceTimeR:SetRelativeWidth(0.12);
     lineGroup:AddChild(raceTimeR);
+    
+    local raceGTimeN = AceGUI:Create("Label");
+    raceGTimeN:SetText(L["UI_PB_HEADER_GPB_N"]);
+    raceGTimeN:SetRelativeWidth(0.15);
+    lineGroup:AddChild(raceGTimeN);
 
     local raceGTimeA = AceGUI:Create("Label");
     raceGTimeA:SetText(L["UI_PB_HEADER_GPB_A"]);
-    raceGTimeA:SetRelativeWidth(0.17);
+   raceGTimeA:SetRelativeWidth(0.15);
     lineGroup:AddChild(raceGTimeA);
 
     local raceGTimeR = AceGUI:Create("Label");
     raceGTimeR:SetText(L["UI_PB_HEADER_GPB_R"]);
-    raceGTimeR:SetRelativeWidth(0.17);
+    raceGTimeR:SetRelativeWidth(0.15);
     lineGroup:AddChild(raceGTimeR);
 end
 
-function DRR:AddPBLine(race, raceAdv, raceReverse, normalTime, advancedTime, reverseTime, container)
+function SRR:AddPBLine(race, raceAdv, raceReverse, normalTime, advancedTime, reverseTime, container)
     local formatedNormal = "-";
     local formatedAdvanced = "-";
     local formatedReverse = "-";
@@ -204,6 +268,7 @@ function DRR:AddPBLine(race, raceAdv, raceReverse, normalTime, advancedTime, rev
             formatedNormal = "|cff13ef13"..formatedNormal.."|r";
         end
     end
+
 
     formatedNormal = formatedNormal.." / |cffffd700"..L["RACE_TIME_FORMAT"](race.gold).."|r";
 
@@ -245,26 +310,38 @@ function DRR:AddPBLine(race, raceAdv, raceReverse, normalTime, advancedTime, rev
 
     local raceTimeN = AceGUI:Create("Label");
     raceTimeN:SetText(formatedNormal);
-    raceTimeN:SetRelativeWidth(0.15);
+    raceTimeN:SetRelativeWidth(0.11);
     lineGroup:AddChild(raceTimeN);
 
     local raceTimeA = AceGUI:Create("Label");
     raceTimeA:SetText(formatedAdvanced);
-    raceTimeA:SetRelativeWidth(0.15);
+    raceTimeA:SetRelativeWidth(0.11);
     lineGroup:AddChild(raceTimeA);
 
     local raceTimeR = AceGUI:Create("Label");
     raceTimeR:SetText(formatedReverse);
-    raceTimeR:SetRelativeWidth(0.15);
+    raceTimeR:SetRelativeWidth(0.11);
     lineGroup:AddChild(raceTimeR);
+
+    local gtimeN = nil;
+    if nil ~= race then
+        local gBest = SRR.db.global.guildpb[race.id];
+        if nil ~= gBest then
+            local player = UnitName("player")
+            gtimeN = L["GUILD_BEST_TIME_FORMAT"](gBest.time, gBest.addedBy);
+            if SRR.CURRENT_PLAYER == gBest.addedBy then
+                gtimeN = "|cff13ef13"..gtimeN.."|r";
+            end
+        end
+    end
 
     local gtimeA = nil;
     if nil ~= raceAdv then
-        local gBest = DRR.db.global.guildpb[raceAdv.id];
+        local gBest = SRR.db.global.guildpb[raceAdv.id];
         if nil ~= gBest then
             local player = UnitName("player")
             gtimeA = L["GUILD_BEST_TIME_FORMAT"](gBest.time, gBest.addedBy);
-            if DRR.CURRENT_PLAYER == gBest.addedBy then
+            if SRR.CURRENT_PLAYER == gBest.addedBy then
                 gtimeA = "|cff13ef13"..gtimeA.."|r";
             end
         end
@@ -272,31 +349,37 @@ function DRR:AddPBLine(race, raceAdv, raceReverse, normalTime, advancedTime, rev
 
     local gtimeR = nil;
     if nil ~= raceReverse then
-        local gBest = DRR.db.global.guildpb[raceReverse.id];
+        local gBest = SRR.db.global.guildpb[raceReverse.id];
         if nil ~= gBest then
             local player = UnitName("player")
             gtimeR = L["GUILD_BEST_TIME_FORMAT"](gBest.time, gBest.addedBy);
-            if DRR.CURRENT_PLAYER == gBest.addedBy then
+            if SRR.CURRENT_PLAYER == gBest.addedBy then
                 gtimeR = "|cff13ef13"..gtimeR.."|r";
             end
         end
     end
 
+    gtimeN = gtimeN or '-';
     gtimeA = gtimeA or '-';
     gtimeR = gtimeR or '-';
 
+    local raceGTimeN = AceGUI:Create("Label");
+    raceGTimeN:SetText(gtimeN);
+    raceGTimeN:SetRelativeWidth(0.15);
+    lineGroup:AddChild(raceGTimeN);
+
     local raceGTimeA = AceGUI:Create("Label");
     raceGTimeA:SetText(gtimeA);
-    raceGTimeA:SetRelativeWidth(0.17);
+    raceGTimeA:SetRelativeWidth(0.15);
     lineGroup:AddChild(raceGTimeA);
 
     local raceGTimeR = AceGUI:Create("Label");
     raceGTimeR:SetText(gtimeR);
-    raceGTimeR:SetRelativeWidth(0.17);
+    raceGTimeR:SetRelativeWidth(0.15);
     lineGroup:AddChild(raceGTimeR);
 end
 
-function DRR:OpenPBWindow()
+function SRR:OpenPBWindow()
     -- Don't open multiple windows
     if isOpened then return end
 
@@ -327,7 +410,7 @@ function DRR:OpenPBWindow()
     scrollFrame:SetLayout("Flow");
     scrollGroup:AddChild(scrollFrame);
 
-    DRR:AddAllPB(scrollFrame);
+    SRR:AddAllPB(scrollFrame);
 
     frame:AddChild(mainGroup);
 
